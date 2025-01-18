@@ -2,7 +2,7 @@ import styles from "./Contact.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
-const Contact = ({ name, number, onDelete }) => {
+const Contact = ({ onDelete, name, number }) => {
   return (
     <li className={styles.contact}>
       <div className={styles.contactInfo}>
