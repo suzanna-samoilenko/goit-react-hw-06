@@ -9,13 +9,14 @@ const ContactList = () => {
 
   const dispatch = useDispatch();
 
+  const filteredContacts = contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
+
   const handleDelete = (id) => {
     dispatch(deleteContact(id));
   };
 
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
   return (
     <ul className={styles.list}>
       {filteredContacts.map(({ id, name, number }) => (
